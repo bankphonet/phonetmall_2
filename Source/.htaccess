@@ -1,0 +1,10 @@
+# rewrite
+Options +FollowSymlinks
+RewriteEngine on
+
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$  			index.php?con=stores&page=store&id=$1 [L,QSA]
